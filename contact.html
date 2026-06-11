@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Book a Discovery Call | Lawson Group</title>
+<meta name="description" content="Book a discovery call with Lawson Group. Tell us what you're trying to solve — you'll get an answer within one business day.">
+<link rel="canonical" href="https://lawson-group.pages.dev/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Lawson<span> Group</span></a>
+    <nav><ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li class="hide-m"><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="contact.html">Book a Call</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:56px 0">
+  <div class="container">
+    <h1>Tell us what you're trying to solve</h1>
+    <p>Describe the problem in a sentence or two. You'll hear back within one business day with a straight answer on whether — and how — we can help.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div>
+      <h2>Send a message</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+        <input type="hidden" name="access_key" value="ee13bb71-10b9-4d0c-8bcf-9f8c08911f97">
+        <input type="hidden" name="subject" value="New Inquiry — Lawson Group Website">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <div><label for="name">Name *</label><input id="name" type="text" name="name" required></div>
+        <div><label for="email">Email *</label><input id="email" type="email" name="email" required></div>
+        <div><label for="company">Business name</label><input id="company" type="text" name="company"></div>
+        <div><label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option>A website for my business</option>
+            <option>AI enablement / company brain</option>
+            <option>Not sure yet — let's talk</option>
+          </select>
+        </div>
+        <div><label for="message">What are you trying to solve? *</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button class="btn btn-navy" type="submit">Send message</button>
+      </form>
+      <div id="formSuccess" style="display:none" class="result">✅ Got it. You'll hear back within one business day — usually faster.</div>
+    </div>
+    <div>
+      <h2>Direct</h2>
+      <div class="card">
+        <p><strong>Email</strong><br><a href="mailto:lawsongrouptechnologies@gmail.com" style="color:var(--teal)">lawsongrouptechnologies@gmail.com</a></p>
+        <p style="margin-top:14px"><strong>Based in</strong><br>Houston, Texas — serving Greater Houston and remote clients nationwide</p>
+        <p style="margin-top:14px"><strong>Response time</strong><br>Within one business day, usually faster</p>
+      </div>
+      <p class="pullquote" style="margin-top:28px">"You'll leave with a clear answer to: what do we build first, and what will it cost."</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <strong style="color:#fff">Lawson Group</strong><br>
+      AI enablement &amp; managed websites<br>
+      Houston, TX<br>
+      <a href="mailto:lawsongrouptechnologies@gmail.com">lawsongrouptechnologies@gmail.com</a>
+    </div>
+    <div>
+      <a href="work.html">Work</a><br>
+      <a href="services.html">Services</a><br>
+      <a href="about.html">About</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="container fine">© 2026 Lawson Group Technologies, LLC. All rights reserved.</div>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const f=e.target, btn=f.querySelector('button');
+  btn.disabled=true; btn.textContent='Sending…';
+  try{
+    const r=await fetch(f.action,{method:'POST',body:new FormData(f)});
+    if(r.ok){f.style.display='none';document.getElementById('formSuccess').style.display='block';}
+    else{btn.disabled=false;btn.textContent='Send message';alert('Something went wrong — email us directly.');}
+  }catch(err){btn.disabled=false;btn.textContent='Send message';alert('Something went wrong — email us directly.');}
+});
+</script>
+<style>@media(max-width:760px){section .container[style*="grid-template-columns"]{display:block!important}section .container>div+div{margin-top:36px}}</style>
+</body>
+</html>
