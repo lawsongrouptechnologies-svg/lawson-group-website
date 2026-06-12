@@ -11,21 +11,26 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="progress"></div>
 <header>
   <div class="container nav">
     <a class="logo" href="index.html">Lawson<span> Group</span></a>
+    <button id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav><ul>
       <li><a href="work.html">Work</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="insights.html">Insights</a></li>
       <li class="hide-m"><a href="about.html">About</a></li>
       <li><a class="nav-cta" href="contact.html">Book a Call</a></li>
     </ul></nav>
   </div>
 </header>
 
-<section class="hero" style="padding:56px 0">
+<section class="hero hero-sub">
+  <canvas id="net" aria-hidden="true"></canvas>
   <div class="container">
-    <h1>Don't take our word for it. Click the links.</h1>
+    <span class="eyebrow"><span class="dot"></span>Live builds — click the links</span>
+    <h1>Don't take our word for it. <em>Click the links.</em></h1>
     <p>Every example below is a real, live client build — not a mockup. Fast static sites, automated lead capture wired to the owner's inbox, built as the first phase of a larger AI operating layer.</p>
   </div>
 </section>
@@ -34,7 +39,11 @@
   <div class="container">
     <div class="grid grid-2">
 
-      <div class="card work-card">
+      <div class="card work-card reveal">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">pmg-price-mortgage.netlify.app</span></div>
+          <div class="live"><span class="dot"></span>Live production site — opens in a new tab</div>
+        </div>
         <div><span class="tag">Mortgage / Financial Services</span><span class="tag">Lead Capture</span><span class="tag">Compliance</span></div>
         <h3>Price Mortgage Group — Houston, TX</h3>
         <p class="meta">Residential lending firm · 14 loan officers</p>
@@ -43,7 +52,11 @@
         <a class="visit" href="https://pmg-price-mortgage.netlify.app/" target="_blank" rel="noopener">Visit the live site →</a>
       </div>
 
-      <div class="card work-card">
+      <div class="card work-card reveal d1">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">scotttexjohnsonrealtor.pages.dev</span></div>
+          <div class="live"><span class="dot"></span>Live production site — opens in a new tab</div>
+        </div>
         <div><span class="tag">Real Estate</span><span class="tag">AI Pilot</span><span class="tag">CRM Replacement</span></div>
         <h3>Scott Johnson, Realtor® — Katy / West Houston</h3>
         <p class="meta">Ambrosi Realty · replacing a $300/mo all-in-one platform</p>
@@ -52,7 +65,11 @@
         <a class="visit" href="https://scotttexjohnsonrealtor.pages.dev" target="_blank" rel="noopener">Visit the live site →</a>
       </div>
 
-      <div class="card work-card">
+      <div class="card work-card reveal">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">alawnso-services.pages.dev</span></div>
+          <div class="live"><span class="dot"></span>Live production site — opens in a new tab</div>
+        </div>
         <div><span class="tag">Local Services</span><span class="tag">SMB Web Presence</span></div>
         <h3>Alawnso Services — Houston, TX</h3>
         <p class="meta">Lawn &amp; landscaping · previously Facebook-only</p>
@@ -61,7 +78,7 @@
         <a class="visit" href="https://alawnso-services.pages.dev" target="_blank" rel="noopener">Visit the live site →</a>
       </div>
 
-      <div class="card work-card" style="background:var(--champagne)">
+      <div class="card work-card reveal d1" style="background:var(--champagne)">
         <div><span class="tag">Your Business</span></div>
         <h3>The next one could be yours</h3>
         <p>Local Houston business without a website? We may have already built yours — ask. Growing company drowning in tribal knowledge? The company brain starts with one call.</p>
@@ -91,6 +108,7 @@
     <div>
       <a href="work.html">Work</a><br>
       <a href="services.html">Services</a><br>
+      <a href="insights.html">Insights</a><br>
       <a href="about.html">About</a><br>
       <a href="contact.html">Contact</a><br>
       <a href="https://www.facebook.com/profile.php?id=61590938600605" target="_blank" rel="noopener">Facebook</a>
@@ -98,5 +116,6 @@
   </div>
   <div class="container fine">© 2026 Lawson Group Technologies, LLC. All rights reserved.</div>
 </footer>
+<script src="app.js" defer></script>
 </body>
 </html>

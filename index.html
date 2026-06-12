@@ -18,12 +18,15 @@
 </script>
 </head>
 <body>
+<div id="progress"></div>
 <header>
   <div class="container nav">
     <a class="logo" href="index.html">Lawson<span> Group</span></a>
+    <button id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav><ul>
       <li><a href="work.html">Work</a></li>
       <li><a href="services.html">Services</a></li>
+      <li><a href="insights.html">Insights</a></li>
       <li class="hide-m"><a href="about.html">About</a></li>
       <li><a class="nav-cta" href="contact.html">Book a Call</a></li>
     </ul></nav>
@@ -31,57 +34,80 @@
 </header>
 
 <section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
   <div class="container">
-    <h1>The way your business runs lives in people's heads. That's the problem.</h1>
+    <span class="eyebrow"><span class="dot"></span>AI enablement · Houston, TX</span>
+    <h1>The way your business runs lives in people's heads. <em>That's the problem.</em></h1>
     <p>Lawson Group builds AI operating systems — "company brains" that capture how your business actually works, so the knowledge stops walking out the door and your whole team gets faster.</p>
-    <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
+      <a class="btn btn-ghost" href="work.html">See live client work</a>
+    </div>
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Structured <b>knowledge</b></span><span>Workflow <b>automation</b></span><span>Lead <b>capture</b></span><span>Daily <b>digests</b></span><span>Built on <b>your stack</b></span><span>Working systems <b>day one</b></span><span>Structured <b>knowledge</b></span><span>Workflow <b>automation</b></span><span>Lead <b>capture</b></span><span>Daily <b>digests</b></span><span>Built on <b>your stack</b></span><span>Working systems <b>day one</b></span>
+  </div>
+</div>
+
 <section>
   <div class="container">
-    <p class="kicker">The problem</p>
-    <h2>Every business runs on tribal knowledge</h2>
-    <p class="lead">Your processes, your judgment calls, the way you quote a job or answer the question customers always ask — it's all undocumented. When the person who knows is out sick, busy, or gone, the business slows down. AI was supposed to fix this. For most companies, it became another tool nobody quite uses.</p>
-    <p class="pullquote">Most AI projects fail not because of the technology — but because nobody structured the knowledge underneath it.</p>
+    <p class="kicker reveal">The problem</p>
+    <h2 class="reveal">Every business runs on tribal knowledge</h2>
+    <p class="lead reveal d1">Your processes, your judgment calls, the way you quote a job or answer the question customers always ask — it's all undocumented. When the person who knows is out sick, busy, or gone, the business slows down. AI was supposed to fix this. For most companies, it became another tool nobody quite uses.</p>
+    <p class="pullquote reveal d2">Most AI projects fail not because of the technology — but because nobody structured the knowledge underneath it.</p>
   </div>
 </section>
 
 <section class="section-alt">
   <div class="container">
-    <p class="kicker">The solution</p>
-    <h2>The Company Brain</h2>
-    <p class="lead">A structured, AI-powered operating layer built on tools you already use. Your knowledge, organized and searchable. Your processes, documented and automated. Your team, answering questions once instead of forever.</p>
+    <p class="kicker reveal">The solution</p>
+    <h2 class="reveal">The Company Brain</h2>
+    <p class="lead reveal d1">A structured, AI-powered operating layer built on tools you already use. Your knowledge, organized and searchable. Your processes, documented and automated. Your team, answering questions once instead of forever.</p>
     <div class="grid grid-3">
-      <div class="card"><h3>Structured knowledge</h3><p>Institutional memory captured as living documents your AI — and your people — can actually use.</p></div>
-      <div class="card"><h3>Workflow automation</h3><p>Lead capture, follow-ups, daily digests, reporting — connected to your existing email, calendar, and CRM.</p></div>
-      <div class="card"><h3>Working systems, day one</h3><p>You get a system your team uses immediately. Not a roadmap. Not a strategy deck.</p></div>
+      <div class="card reveal d1"><h3>Structured knowledge</h3><p>Institutional memory captured as living documents your AI — and your people — can actually use.</p></div>
+      <div class="card reveal d2"><h3>Workflow automation</h3><p>Lead capture, follow-ups, daily digests, reporting — connected to your existing email, calendar, and CRM.</p></div>
+      <div class="card reveal d3"><h3>Working systems, day one</h3><p>You get a system your team uses immediately. Not a roadmap. Not a strategy deck.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+    <p class="kicker reveal">Why Lawson Group</p>
+    <h2 class="reveal">Enterprise AI experience, without the big-firm overhead</h2>
+    <p class="lead reveal d1">Lawson Group is led by Jeremy Sheriff — 6.5 years as GenAI Lead at Capco implementing AI across Fortune 100 financial services firms, and 21 years of professional experience. The same discipline that ships AI inside regulated banks, applied to your business.</p>
+    <div class="stats">
+      <div class="stat reveal d1"><span class="val" data-count="6.5">0<small>&nbsp;yrs</small></span><p>GenAI Lead at Capco — enterprise AI implementation</p></div>
+      <div class="stat reveal d2"><span class="val">F100</span><p>Financial services clients — compliance-grade delivery</p></div>
+      <div class="stat reveal d3"><span class="val" data-count="21">0<small>&nbsp;yrs</small></span><p>Professional experience</p></div>
+    </div>
+    <p style="margin-top:30px" class="reveal d3"><a class="btn btn-ghost" href="work.html">See live client work →</a></p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <p class="kicker reveal">How it works</p>
+    <h2 class="reveal">Three steps, no mystery</h2>
+    <div class="steps">
+      <div class="step reveal d1"><h3>Discovery call</h3><p>30 minutes on how your business actually runs and where the friction is. Listening, not pitching.</p></div>
+      <div class="step reveal d2"><h3>Paid assessment</h3><p>A structured audit of where AI will — and won't — move the needle for you, delivered as a prioritized roadmap.</p></div>
+      <div class="step reveal d3"><h3>Build &amp; run</h3><p>We implement the company brain on your existing stack, train your team, and support it month to month.</p></div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <p class="kicker">Why Lawson Group</p>
-    <h2>Enterprise AI experience, without the big-firm overhead</h2>
-    <p class="lead">Lawson Group is led by Jeremy Sheriff — 6.5 years as GenAI Lead at Capco implementing AI across Fortune 100 financial services firms, and 21 years of professional experience. The same discipline that ships AI inside regulated banks, applied to your business.</p>
-    <div class="grid grid-3" style="margin-top:24px">
-      <div class="card card-ice"><span class="num">6.5 yrs</span><p>GenAI Lead, Capco — enterprise AI implementation</p></div>
-      <div class="card card-ice"><span class="num">F100</span><p>Financial services clients — compliance-grade delivery</p></div>
-      <div class="card card-ice"><span class="num">21 yrs</span><p>Professional experience</p></div>
-    </div>
-    <p style="margin-top:26px"><a class="btn btn-outline" href="work.html">See live client work →</a></p>
-  </div>
-</section>
-
-<section class="section-alt">
-  <div class="container">
-    <p class="kicker">How it works</p>
-    <h2>Three steps, no mystery</h2>
+    <p class="kicker reveal">Insights</p>
+    <h2 class="reveal">How we think about this work</h2>
     <div class="grid grid-3">
-      <div class="card"><span class="num">1</span><h3>Discovery call</h3><p>30 minutes on how your business actually runs and where the friction is. Listening, not pitching.</p></div>
-      <div class="card"><span class="num">2</span><h3>Paid assessment</h3><p>A structured audit of where AI will — and won't — move the needle for you, delivered as a prioritized roadmap.</p></div>
-      <div class="card"><span class="num">3</span><h3>Build &amp; run</h3><p>We implement the company brain on your existing stack, train your team, and support it month to month.</p></div>
+      <div class="card insight-card reveal d1"><span class="date">June 2026</span><h3>Why most AI projects fail before the first prompt</h3><p>The technology is rarely the hard part. The knowledge underneath it is.</p><a class="more" href="insights.html#knowledge-first">Read →</a></div>
+      <div class="card insight-card reveal d2"><span class="date">June 2026</span><h3>Stop paying frontier prices for mechanical work</h3><p>Route the right work to the right model — and to no model at all.</p><a class="more" href="insights.html#model-routing">Read →</a></div>
+      <div class="card insight-card reveal d3"><span class="date">June 2026</span><h3>Your operating model as infrastructure</h3><p>What a company brain actually is, and why markdown beats middleware.</p><a class="more" href="insights.html#company-brain">Read →</a></div>
     </div>
   </div>
 </section>
@@ -105,6 +131,7 @@
     <div>
       <a href="work.html">Work</a><br>
       <a href="services.html">Services</a><br>
+      <a href="insights.html">Insights</a><br>
       <a href="about.html">About</a><br>
       <a href="contact.html">Contact</a><br>
       <a href="https://www.facebook.com/profile.php?id=61590938600605" target="_blank" rel="noopener">Facebook</a>
@@ -112,5 +139,6 @@
   </div>
   <div class="container fine">© 2026 Lawson Group Technologies, LLC. All rights reserved.</div>
 </footer>
+<script src="app.js" defer></script>
 </body>
 </html>
