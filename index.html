@@ -10,6 +10,9 @@
 <meta property="og:description" content="The knowledge in your people's heads, turned into infrastructure that scales. AI enablement by an ex-Capco GenAI Lead.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lawson-group.pages.dev/">
+<meta property="og:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3FET0ZQT6mhkG0YI2AEzQtaQlAM/hf_20260616_220556_e68b668f-2e8e-40ab-b9cd-cf58db85dd09.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://d8j0ntlcm91z4.cloudfront.net/user_3FET0ZQT6mhkG0YI2AEzQtaQlAM/hf_20260616_220556_e68b668f-2e8e-40ab-b9cd-cf58db85dd09.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -18,12 +21,14 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div id="progress"></div>
 <header>
   <div class="container nav">
     <a class="logo" href="index.html">Lawson<span> Group</span></a>
     <button id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav><ul>
+    <nav aria-label="Primary"><ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
       <li><a href="work.html">Work</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="insights.html">Insights</a></li>
@@ -33,6 +38,7 @@
   </div>
 </header>
 
+<main id="main">
 <section class="hero">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="container">
@@ -84,61 +90,44 @@
       <div class="stat reveal d2"><span class="val">F100</span><p>Financial services clients — compliance-grade delivery</p></div>
       <div class="stat reveal d3"><span class="val" data-count="21">0<small>&nbsp;yrs</small></span><p>Professional experience</p></div>
     </div>
-    <p style="margin-top:30px" class="reveal d3"><a class="btn btn-ghost" href="work.html">See live client work →</a></p>
-  </div>
-</section>
-
-<section class="section-alt">
-  <div class="container">
-    <p class="kicker reveal">How it works</p>
-    <h2 class="reveal">Three steps, no mystery</h2>
-    <div class="steps">
-      <div class="step reveal d1"><h3>Discovery call</h3><p>30 minutes on how your business actually runs and where the friction is. Listening, not pitching.</p></div>
-      <div class="step reveal d2"><h3>Paid assessment</h3><p>A structured audit of where AI will — and won't — move the needle for you, delivered as a prioritized roadmap.</p></div>
-      <div class="step reveal d3"><h3>Build &amp; run</h3><p>We implement the company brain on your existing stack, train your team, and support it month to month.</p></div>
-    </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <p class="kicker reveal">Insights</p>
-    <h2 class="reveal">How we think about this work</h2>
+    <p class="kicker reveal">Proof</p>
+    <h2 class="reveal">Live client builds — not mockups</h2>
+    <p class="lead reveal d1">Every example below is a real, deployed client site. Click through to the live build.</p>
     <div class="grid grid-3">
-      <div class="card insight-card reveal d1"><span class="date">June 2026</span><h3>Why most AI projects fail before the first prompt</h3><p>The technology is rarely the hard part. The knowledge underneath it is.</p><a class="more" href="insights.html#knowledge-first">Read →</a></div>
-      <div class="card insight-card reveal d2"><span class="date">June 2026</span><h3>Stop paying frontier prices for mechanical work</h3><p>Route the right work to the right model — and to no model at all.</p><a class="more" href="insights.html#model-routing">Read →</a></div>
-      <div class="card insight-card reveal d3"><span class="date">June 2026</span><h3>Your operating model as infrastructure</h3><p>What a company brain actually is, and why markdown beats middleware.</p><a class="more" href="insights.html#company-brain">Read →</a></div>
+      <div class="card work-card reveal d1">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">pmg-price-mortgage.netlify.app</span></div>
+          <div class="live"><span class="dot"></span>Live production site</div>
+        </div>
+        <h3>Price Mortgage Group</h3>
+        <p class="meta">Mortgage / financial services · Houston, TX</p>
+        <p>Four-page lending site with loan-officer directory, NMLS compliance disclosures, and integrated lead capture — phase one of a broader AI enablement engagement.</p>
+        <a class="visit" href="https://pmg-price-mortgage.netlify.app/" target="_blank" rel="noopener">Visit the live site →</a>
+      </div>
+      <div class="card work-card reveal d2">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">scotttexjohnsonrealtor.pages.dev</span></div>
+          <div class="live"><span class="dot"></span>Live production site</div>
+        </div>
+        <h3>Scott Johnson, Realtor®</h3>
+        <p class="meta">Real estate · Katy / West Houston</p>
+        <p>SEO-built agent site delivered ahead of deadline at a third of his previous platform cost, with a Claude-based lead-intake and daily-digest pilot layered on top.</p>
+        <a class="visit" href="https://scotttexjohnsonrealtor.pages.dev" target="_blank" rel="noopener">Visit the live site →</a>
+      </div>
+      <div class="card work-card reveal d3">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">alawnso-services.pages.dev</span></div>
+          <div class="live"><span class="dot"></span>Live production site</div>
+        </div>
+        <h3>Alawnso Services</h3>
+        <p class="meta">Lawn &amp; landscaping · Houston, TX</p>
+        <p>A Facebook-only business taken to a fast, mobile-first site with estimate-request capture — built, deployed, and live before the owner paid a dollar.</p>
+        <a class="visit" href="https://alawnso-services.pages.dev" target="_blank" rel="noopener">Visit the live site →</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<div class="cta-band">
-  <div class="container">
-    <h2>Want a clear answer to "what should we build first?"</h2>
-    <p>One call. You'll leave knowing what to build first and what it would cost.</p>
-    <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
-  </div>
-</div>
-
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <strong style="color:#fff">Lawson Group</strong><br>
-      AI enablement &amp; managed websites<br>
-      Houston, TX<br>
-      <a href="mailto:lawsongrouptechnologies@gmail.com">lawsongrouptechnologies@gmail.com</a>
-    </div>
-    <div>
-      <a href="work.html">Work</a><br>
-      <a href="services.html">Services</a><br>
-      <a href="insights.html">Insights</a><br>
-      <a href="about.html">About</a><br>
-      <a href="contact.html">Contact</a><br>
-      <a href="https://www.facebook.com/profile.php?id=61590938600605" target="_blank" rel="noopener">Facebook</a>
-    </div>
-  </div>
-  <div class="container fine">© 2026 Lawson Group Technologies, LLC. All rights reserved.</div>
-</footer>
-<script src="app.js" defer></script>
-</body>
-</html>
+    <p style="margin-top:28px" class="re
