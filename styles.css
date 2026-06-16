@@ -81,9 +81,13 @@ h3{font-size:1.18rem;font-weight:500;color:var(--navy);margin-bottom:8px}
 .section-dark .pullquote{color:var(--ice);border-color:var(--teal-bright)}
 
 /* Reveal on scroll */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+/* Entrance animation is CSS-only (plays on load) — content is NEVER dependent on JS.
+   The old opacity:0 + JS IntersectionObserver pattern left copy invisible if the
+   observer didn't fire. Animation with fill-mode 'both' guarantees the end state. */
+.reveal{opacity:0;transform:translateY(26px);animation:revealUp .6s ease both}
+.reveal.d1{animation-delay:.1s}.reveal.d2{animation-delay:.2s}.reveal.d3{animation-delay:.3s}
 .reveal.in{opacity:1;transform:none}
-.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+@keyframes revealUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 
 /* Stat counters */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:38px}
@@ -155,10 +159,4 @@ article.post .byline{color:var(--slate);font-size:.9rem;margin-top:18px}
 
 /* Footer */
 footer{background:var(--navy-ink);color:var(--ice);padding:48px 0 36px;font-size:.88rem}
-.footer-grid{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;align-items:flex-start}
-footer a{color:var(--ice);text-decoration:none}
-footer a:hover{color:var(--white)}
-footer .fine{margin-top:22px;color:var(--slate);border-top:1px solid rgba(212,229,235,.12);padding-top:16px}
-
-@media(max-width:760px){
-  #navToggle{disp
+.footer-
