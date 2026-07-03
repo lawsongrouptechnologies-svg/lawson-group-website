@@ -79,6 +79,17 @@
   .contact{margin-top:16px;color:#A9C7D1;font-size:14px}
 
   footer{padding:26px 0 40px;color:var(--slate);font-size:12.5px;text-align:center}
+
+  /* assessment request form (CTA) */
+  .assess{max-width:460px;margin:8px auto 4px;text-align:left}
+  .assess .row{display:flex;gap:10px}
+  @media(max-width:560px){.assess .row{flex-direction:column}}
+  .assess input,.assess textarea{width:100%;margin-top:10px;padding:12px 14px;border:1px solid #33587a;border-radius:9px;background:#12293f;color:#fff;font-family:'DM Sans';font-size:15px}
+  .assess input::placeholder,.assess textarea::placeholder{color:#9FB4C4}
+  .assess input:focus,.assess textarea:focus{outline:none;border-color:var(--teal)}
+  .assess button{width:100%;margin-top:12px;background:var(--teal);color:#fff;font-weight:600;border:none;padding:13px 26px;border-radius:10px;font-size:15px;cursor:pointer}
+  .assess button:disabled{opacity:.6;cursor:default}
+  .assess-ok{max-width:460px;margin:10px auto 2px;background:var(--ice);color:var(--navy);border-radius:12px;padding:16px 18px;font-weight:600}
 </style>
 </head>
 <body>
@@ -192,8 +203,21 @@
     <div class="cta">
       <h2>The next step</h2>
       <p>The two-day assessment. I map where the money goes and where the easy wins are, then hand you a roadmap and a proposal with real numbers behind them. You own the output either way.</p>
-      <a class="btn" href="mailto:lawsongrouptechnologies@gmail.com?subject=FountainBlu%20assessment">Book the assessment — $500</a>
-      <div class="contact">Jeremy Sheriff · Lawson Group · 843-441-6088 · lawsongrouptechnologies@gmail.com · lawson-group.pages.dev</div>
+      <form id="assessForm" class="assess" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="ee13bb71-10b9-4d0c-8bcf-9f8c08911f97">
+      <input type="hidden" name="subject" value="FountainBlu — Assessment Request ($500)">
+      <input type="hidden" name="from_name" value="FountainBlu Roadmap Page">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="row">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <input type="text" name="phone" placeholder="Phone (optional)">
+      <textarea name="message" rows="2" placeholder="Anything you'd like me to know? (optional)"></textarea>
+      <button type="submit">Request the assessment — $500</button>
+    </form>
+    <div id="assessOk" class="assess-ok" style="display:none">Thank you — your request is in. I'll reach out within one business day to set the two days. — Jeremy</div>
+      <div class="contact">Prefer email? <a href="mailto:lawsongrouptechnologies@gmail.com?subject=FountainBlu%20assessment" style="color:#CFE0E7;text-decoration:underline">Write me directly.</a><br>Jeremy Sheriff · Lawson Group · 843-441-6088 · lawsongrouptechnologies@gmail.com · lawson-group.pages.dev</div>
     </div>
   </div>
 </section>
@@ -237,6 +261,18 @@
     b.classList.add('active'); show(b.dataset.p);
   });
   show("0");
+</script>
+<script>
+document.getElementById('assessForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  var f=e.target, b=f.querySelector('button');
+  b.disabled=true; b.textContent='Sending…';
+  try{
+    var r=await fetch(f.action,{method:'POST',body:new FormData(f)});
+    if(r.ok){f.style.display='none';document.getElementById('assessOk').style.display='block';}
+    else{b.disabled=false;b.textContent='Request the assessment — $500';alert('Something went wrong — please email lawsongrouptechnologies@gmail.com');}
+  }catch(err){b.disabled=false;b.textContent='Request the assessment — $500';alert('Something went wrong — please email lawsongrouptechnologies@gmail.com');}
+});
 </script>
 </body>
 </html>
