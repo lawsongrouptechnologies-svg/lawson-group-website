@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FountainBlu — Growth Roadmap | Lawson Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B3A5C; --teal:#4A8490; --champagne:#F0EDE6; --ice:#D4E5EB;
+    --slate:#8B9EAA; --ink:#2B2B2B; --offwhite:#F8F9FA; --white:#fff;
+    --shadow:0 8px 30px rgba(27,58,92,.10); --line:#E2DED4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--champagne);color:var(--ink);line-height:1.65}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'DM Sans';font-weight:700;color:var(--navy);letter-spacing:-.01em}
+  h2{font-size:26px;margin-bottom:6px} h3{font-size:19px;font-weight:600}
+
+  header{background:linear-gradient(135deg,var(--navy),#15314e);color:#fff;padding:54px 0 48px}
+  header .kick{color:#A9C7D1;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+  header h1{color:#fff;font-size:42px;line-height:1.12;margin:12px 0 14px}
+  header .tag{font-family:'DM Serif Display';font-style:italic;font-size:23px;color:var(--ice);font-weight:400;max-width:680px}
+  header .who{margin-top:18px;color:#9FB4C4;font-size:14px}
+
+  section{padding:42px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--teal);font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+  p.body{font-size:16px;max-width:760px;margin-bottom:14px}
+
+  .gaps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+  @media(max-width:780px){.gaps{grid-template-columns:1fr 1fr}}
+  .gap{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}
+  .gap .big{font-family:'DM Sans';font-weight:700;font-size:22px;color:var(--navy)}
+  .gap .lbl{font-size:13px;color:var(--ink);margin-top:4px}
+  .note{font-size:12.5px;color:var(--slate);margin-top:12px;font-style:italic}
+
+  .brain{background:var(--navy);color:#fff;border-radius:16px;padding:26px 28px;margin-top:6px}
+  .brain h3{color:#fff} .brain p{color:#D8E4EA;font-size:15.5px;margin-top:8px;max-width:720px}
+
+  /* phases */
+  .ptabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+  .ptab{font-family:'DM Sans';font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--white);
+    color:var(--navy);padding:10px 16px;border-radius:10px;cursor:pointer;transition:.15s;text-align:left}
+  .ptab small{display:block;font-weight:400;color:var(--slate);font-size:11.5px;margin-top:2px}
+  .ptab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .ptab.active small{color:#A9C7D1}
+  .pbody{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:12px;padding:22px 24px;box-shadow:var(--shadow);min-height:120px}
+  .pbody h3{margin-bottom:4px} .pbody .when{color:var(--teal);font-weight:600;font-size:13px;margin-bottom:12px}
+  .pbody ul{margin-left:18px} .pbody li{margin:7px 0;font-size:15px}
+  .pbody .dollar{display:inline-block;background:var(--ice);color:var(--navy);font-weight:600;font-size:12px;padding:2px 9px;border-radius:6px;margin-left:6px}
+
+  .scope{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+  @media(max-width:780px){.scope{grid-template-columns:1fr}}
+  .scol{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
+  .scol.in{border-top:4px solid var(--teal)} .scol.out{border-top:4px solid var(--slate)}
+  .scol h3{font-size:16px;margin-bottom:10px}
+  .scol ul{margin-left:17px} .scol li{margin:6px 0;font-size:14px;color:var(--ink)}
+  .scol.out li{color:var(--slate)}
+  .scol .cap{font-size:12.5px;color:var(--slate);margin-top:10px;font-style:italic}
+
+  .savings{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:var(--ice);border-radius:16px;padding:24px 28px;margin-top:6px}
+  .savings .num{font-family:'DM Sans';font-weight:700;font-size:30px;color:var(--navy)}
+  .savings .arr{font-size:24px;color:var(--teal);font-weight:700}
+  .savings .save{margin-left:auto;text-align:right}
+  .savings .save b{display:block;font-size:30px;color:var(--teal);font-weight:700}
+  .savings .save span{font-size:13px;color:var(--navy)}
+  @media(max-width:780px){.savings .save{margin-left:0;text-align:left;width:100%}}
+
+  table{width:100%;border-collapse:collapse;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:14.5px;margin-top:8px}
+  th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-size:13px;font-weight:600}
+  td{padding:12px 14px;border-top:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#FBFAF6}
+
+  .cta{background:linear-gradient(135deg,var(--navy),#15314e);color:#fff;border-radius:16px;padding:34px;text-align:center;margin-top:10px}
+  .cta h2{color:#fff;font-size:26px} .cta p{color:#CFE0E7;max-width:560px;margin:10px auto 18px;font-size:15.5px}
+  .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:10px;font-size:15px}
+  .contact{margin-top:16px;color:#A9C7D1;font-size:14px}
+
+  footer{padding:26px 0 40px;color:var(--slate);font-size:12.5px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kick">Lawson Group · Growth Roadmap</div>
+    <h1>FountainBlu Event Centers</h1>
+    <div class="tag">The rooms, the reputation, and the demand are already here. Let's build the system underneath them.</div>
+    <div class="who">Prepared for Michelle Pharris · from our conversation on June 18, 2026</div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What I heard</div>
+    <h2>Money is on the table — let's go get it</h2>
+    <p class="body">You named the gaps yourself. Small leaks that add up, weekday space sitting empty, and a story that lives in a few people's heads instead of in front of every customer. This roadmap turns those gaps into recovered and captured dollars — in an order where the first wins pay for the work that follows.</p>
+    <div class="gaps">
+      <div class="gap"><div class="big">Labor</div><div class="lbl">A reconciliation that didn't tie out</div></div>
+      <div class="gap"><div class="big">$3,500/mo</div><div class="lbl">On leads you can't track or follow up</div></div>
+      <div class="gap"><div class="big">Weekdays</div><div class="lbl">Corporate &amp; nonprofit space sitting empty</div></div>
+      <div class="gap"><div class="big">The story</div><div class="lbl">No easy way to show what each room can be</div></div>
+    </div>
+    <p class="note">The exact dollar figures come from the two-day assessment — that's where we put real numbers on each gap before anything gets built.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What I build</div>
+    <div class="brain">
+      <h3>A Company Brain</h3>
+      <p>A structured operating system that captures how FountainBlu actually runs and connects to the tools you already use. It documents the process once, automates the repetitive handoffs, and gives every room a way to sell itself. Not new software for your team to learn — an operating layer on top of what you have.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">How we get there · tap a phase</div>
+    <h2>The plan</h2>
+    <div class="ptabs" id="ptabs">
+      <button class="ptab active" data-p="0">Phase 0<small>Assessment</small></button>
+      <button class="ptab" data-p="1">Phase 1<small>Stop the leaks</small></button>
+      <button class="ptab" data-p="2">Phase 2<small>Fill the weekdays</small></button>
+      <button class="ptab" data-p="3">Later<small>Heavy lifts</small></button>
+    </div>
+    <div class="pbody" id="pbody"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Scope</div>
+    <h2>What's in this engagement — and what comes later</h2>
+    <div class="scope">
+      <div class="scol in">
+        <h3>In scope now</h3>
+        <ul>
+          <li>Lead capture, follow-up automation, and one shared calendar</li>
+          <li>Financial reconciliation so invoices tie out before checks go out</li>
+          <li>Website fixes, bilingual option, shared photo drive, ad-spend visibility</li>
+          <li>Weekday corporate &amp; nonprofit push</li>
+          <li>Day-of-week and segment pricing built from competitor rates</li>
+          <li>QR check-in with real headcount and overage capture</li>
+          <li>Rendered room looks, digital portfolio, lobby screen, reviews on the site</li>
+        </ul>
+      </div>
+      <div class="scol out">
+        <h3>Planned for later</h3>
+        <ul>
+          <li>Full inventory catalog — every room, linen, and piece counted and tagged</li>
+          <li>Putting the kitchen and the extra buildings to work</li>
+          <li>A permanently corporate-ready room with modular staging</li>
+        </ul>
+        <div class="cap">Real opportunities, and their own project — scoped and priced once the foundation above is paying for itself.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">What it costs</div>
+    <h2>Simple, and it pays for itself</h2>
+    <div class="savings">
+      <div><div class="num">$3,500/mo</div><span style="font-size:13px;color:var(--navy)">leads + site today</span></div>
+      <div class="arr">→</div>
+      <div><div class="num">$1,500/mo</div><span style="font-size:13px;color:var(--navy)">Brain + site with us</span></div>
+      <div class="save"><b>~$2,000/mo</b><span>saved — and you gain a real CRM, live numbers, and the Company Brain</span></div>
+    </div>
+    <table>
+      <tr><th>Phase</th><th>What you get</th><th>Investment</th></tr>
+      <tr><td><strong>0 — Assessment &amp; roadmap</strong></td><td>Two-day shadow, a roadmap and proposal you own</td><td><strong>$500</strong></td></tr>
+      <tr><td><strong>1–2 — Implementation</strong></td><td>The working system above</td><td>Indicative $3,500–$5,000 · final scope set by the assessment</td></tr>
+      <tr><td><strong>Ongoing — Brain &amp; site</strong></td><td>Maintenance, growth, and a regular check-in</td><td>$1,500/month</td></tr>
+    </table>
+    <p class="note">Each phase stands on its own. Nothing moves forward without your yes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Why me</div>
+    <p class="body">6.5 years as GenAI Lead at Capco, implementing AI across Fortune 100 financial services firms. The projects that stick are the ones that structure the knowledge underneath the AI first. That is the work — a system your team uses on day one, not a strategy deck.</p>
+  </div>
+</section>
+
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="cta">
+      <h2>The next step</h2>
+      <p>The two-day assessment. I map where the money goes and where the easy wins are, then hand you a roadmap and a proposal with real numbers behind them. You own the output either way.</p>
+      <a class="btn" href="mailto:lawsongrouptechnologies@gmail.com?subject=FountainBlu%20assessment">Book the assessment — $500</a>
+      <div class="contact">Jeremy Sheriff · Lawson Group · 843-441-6088 · lawsongrouptechnologies@gmail.com · lawson-group.pages.dev</div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Lawson Group · prepared for FountainBlu Event Centers · June 2026</div></footer>
+
+<script>
+  const P={
+    "0":{t:"Assessment and roadmap",w:"Two days, on site",items:[
+      ["Shadow operations and pull the price sheets, contracts, and lead flow",""],
+      ["Sit down with you, Lily, and Ophelia — every voice in it",""],
+      ["Put real dollar figures on every gap and opportunity","the numbers"],
+      ["Fix the website errors during the visit, at no extra cost",""],
+      ["You get a roadmap and proposal you own, whatever you decide","$500"]]},
+    "1":{t:"Stop the leaks and capture the leads",w:"First month",items:[
+      ["Lead capture wired into a real follow-up system","hard $"],
+      ["Date, event type, budget, and guest count on the inquiry form",""],
+      ["One shared calendar across all five spaces",""],
+      ["Reconciliation so labor and vendor invoices tie out before checks go out","hard $"],
+      ["Website fixes, bilingual option, shared photo drive, ad-spend visibility",""]]},
+    "2":{t:"Fill the weekdays and sharpen the offer",w:"Weeks four to eight",items:[
+      ["A real push on weekday corporate and nonprofit bookings","hard $"],
+      ["Day-of-week and segment pricing built from competitor rates",""],
+      ["QR check-in that captures real headcount and the overages you're missing","hard $"],
+      ["Rendered looks per room, a clean digital portfolio, and a lobby screen",""],
+      ["Your reviews pulled through to the website",""]]},
+    "3":{t:"The heavy lifts — a later project",w:"Scoped once the foundation pays for itself",items:[
+      ["A full inventory catalog — every room, linen, and piece counted and tagged",""],
+      ["Putting the kitchen and the extra buildings to work",""],
+      ["A permanently corporate-ready room with modular staging",""],
+      ["Real opportunities, planned and priced separately",""]]}
+  };
+  function show(p){
+    const d=P[p]; let h='<h3>'+d.t+'</h3><div class="when">'+d.w+'</div><ul>';
+    d.items.forEach(([txt,tag])=>{ h+='<li>'+txt+(tag?' <span class="dollar">'+tag+'</span>':'')+'</li>'; });
+    h+='</ul>'; document.getElementById('pbody').innerHTML=h;
+  }
+  document.getElementById('ptabs').addEventListener('click',e=>{
+    const b=e.target.closest('.ptab'); if(!b)return;
+    document.querySelectorAll('.ptab').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active'); show(b.dataset.p);
+  });
+  show("0");
+</script>
+</body>
+</html>
