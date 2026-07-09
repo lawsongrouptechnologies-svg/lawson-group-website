@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Book a Discovery Call | Lawson Group</title>
-<meta name="description" content="Book a discovery call with Lawson Group. Tell us what you're trying to solve — you'll get an answer within one business day.">
+<title>Book a Discovery Call | Lawson Group</title>
+<meta name="description" content="Book a discovery call with Lawson Group. Tell us what you're trying to solve, and you'll get an answer within one business day.">
 <link rel="canonical" href="https://lawson-group.pages.dev/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
@@ -19,7 +19,6 @@
     <button id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav><ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="work.html">Work</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li class="hide-m"><a href="about.html">About</a></li>
@@ -34,7 +33,7 @@
   <div class="container">
     <span class="eyebrow"><span class="dot"></span>Contact</span>
     <h1>Tell us what you're trying to solve</h1>
-    <p>Describe the problem in a sentence or two. You'll hear back within one business day with a straight answer on whether — and how — we can help.</p>
+    <p>Describe the problem in a sentence or two. You'll hear back within one business day with a straight answer on whether, and how, we can help.</p>
   </div>
 </section>
 
@@ -44,7 +43,7 @@
       <h2>Send a message</h2>
       <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
         <input type="hidden" name="access_key" value="ee13bb71-10b9-4d0c-8bcf-9f8c08911f97">
-        <input type="hidden" name="subject" value="New Inquiry — Lawson Group Website">
+        <input type="hidden" name="subject" value="New Inquiry from Lawson Group Website">
         <input type="checkbox" name="botcheck" style="display:none">
         <div><label for="name">Name *</label><input id="name" type="text" name="name" required></div>
         <div><label for="email">Email *</label><input id="email" type="email" name="email" required></div>
@@ -53,19 +52,19 @@
           <select id="interest" name="interest">
             <option>A website for my business</option>
             <option>AI enablement / company brain</option>
-            <option>Not sure yet — let's talk</option>
+            <option>Not sure yet, let's talk</option>
           </select>
         </div>
         <div><label for="message">What are you trying to solve? *</label><textarea id="message" name="message" rows="5" required></textarea></div>
         <button class="btn btn-navy" type="submit">Send message</button>
       </form>
-      <div id="formSuccess" style="display:none" class="result">✅ Got it. You'll hear back within one business day — usually faster.</div>
+      <div id="formSuccess" style="display:none" class="result">Got it. You'll hear back within one business day, usually faster.</div>
     </div>
     <div class="reveal d1">
       <h2>Direct</h2>
       <div class="card">
         <p><strong>Email</strong><br><a href="mailto:lawsongrouptechnologies@gmail.com" style="color:var(--teal-deep)">lawsongrouptechnologies@gmail.com</a></p>
-        <p style="margin-top:14px"><strong>Based in</strong><br>Houston, Texas — serving Greater Houston and remote clients nationwide</p>
+        <p style="margin-top:14px"><strong>Based in</strong><br>Houston, Texas. Serving Greater Houston and remote clients nationwide.</p>
         <p style="margin-top:14px"><strong>Response time</strong><br>Within one business day, usually faster</p>
       </div>
       <p class="pullquote" style="margin-top:28px">"You'll leave with a clear answer to: what do we build first, and what will it cost."</p>
@@ -85,7 +84,6 @@
     <div class="footer-col">
       <h4>Explore</h4>
       <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
       <a href="services.html">Services</a>
     </div>
     <div class="footer-col">
@@ -100,7 +98,7 @@
       <a href="mailto:lawsongrouptechnologies@gmail.com">Email</a>
     </div>
   </div>
-  <div class="container fine">© 2026 Lawson Group Technologies, LLC. All rights reserved.</div>
+  <div class="container fine">© 2026 Lawson Consulting Group LLC, dba Lawson Group. All rights reserved.</div>
 </footer>
 
 <script>
@@ -111,8 +109,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
   try{
     const r=await fetch(f.action,{method:'POST',body:new FormData(f)});
     if(r.ok){f.style.display='none';document.getElementById('formSuccess').style.display='block';}
-    else{btn.disabled=false;btn.textContent='Send message';alert('Something went wrong — email us directly.');}
-  }catch(err){btn.disabled=false;btn.textContent='Send message';alert('Something went wrong — email us directly.');}
+    else{btn.disabled=false;btn.textContent='Send message';alert('Something went wrong. Email us directly.');}
+  }catch(err){btn.disabled=false;btn.textContent='Send message';alert('Something went wrong. Email us directly.');}
 });
 </script>
 <style>@media(max-width:760px){section .container[style*="grid-template-columns"]{display:block!important}section .container>div+div{margin-top:36px}}</style>

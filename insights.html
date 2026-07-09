@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insights — How We Think About AI Enablement | Lawson Group</title>
+<title>Insights | How We Think About AI Enablement | Lawson Group</title>
 <meta name="description" content="Field notes from building AI operating systems: why AI projects fail, how to route work to the right model, and what a company brain actually is.">
 <link rel="canonical" href="https://lawson-group.pages.dev/insights.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,6 @@
     <button id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav><ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="work.html">Work</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li class="hide-m"><a href="about.html">About</a></li>
@@ -34,7 +33,7 @@
   <div class="container">
     <span class="eyebrow"><span class="dot"></span>Field notes</span>
     <h1>Insights from the build</h1>
-    <p>Not thought leadership for its own sake — working notes from implementing AI systems inside real businesses, written by the person doing the implementing.</p>
+    <p>Not thought leadership for its own sake. These are working notes from implementing AI systems inside real businesses, written by the person doing the implementing.</p>
   </div>
 </section>
 
@@ -44,31 +43,31 @@
     <article class="post" id="knowledge-first">
       <span class="date">June 2026</span>
       <h2>Why most AI projects fail before the first prompt</h2>
-      <p>Here's the pattern, seen across six and a half years of enterprise AI implementation: a company buys an AI tool, runs a pilot, gets a demo that impresses everyone — and six months later nobody uses it. The post-mortem blames the model, the vendor, or "change management."</p>
-      <p>The real cause is almost always upstream. The AI was asked to operate on knowledge that was never structured. How you quote a job. What makes a lead worth chasing. The exception your best operations person catches every time, by feel. None of it written down — so none of it available to the system that was supposed to automate it.</p>
+      <p>Here is the pattern, seen across six and a half years of enterprise implementation, the last three focused on AI: a company buys an AI tool, runs a pilot, gets a demo that impresses everyone, and six months later nobody uses it. The post-mortem blames the model, the vendor, or "change management."</p>
+      <p>The real cause is almost always upstream. The AI was asked to operate on knowledge that was never structured. How you quote a job. What makes a lead worth chasing. The exception your best operations person catches every time, by feel. None of it written down, so none of it available to the system that was supposed to automate it.</p>
       <p>A model can only be as useful as the context it's given. Give it a clean, structured picture of how your business actually works, and even modest tooling produces results. Give it nothing, and the most advanced model in the world produces generic answers your team will rightly ignore.</p>
       <p>That's why every Lawson Group engagement starts with knowledge architecture, not tooling. Structure first. Automation second. In that order, AI sticks. In the reverse order, it becomes shelfware.</p>
-      <p class="byline">— Jeremy Sheriff, Lawson Group</p>
+      <p class="byline">Jeremy Sheriff, Lawson Group</p>
     </article>
 
     <article class="post" id="model-routing">
       <span class="date">June 2026</span>
       <h2>Stop paying frontier prices for mechanical work</h2>
-      <p>The most expensive AI models are remarkable at judgment: synthesis, ambiguity, client-facing language. They are also routinely wasted on work that doesn't need judgment at all — checking links, extracting fields from documents, formatting reports, scanning files for a phrase.</p>
-      <p>We run our own operation on a three-tier rule, and we build the same into client systems. If a task is deterministic, it's a script — zero AI cost. If it's mechanical but fuzzy — bulk scanning, extraction, collation — it goes to a small, cheap model. Only work that genuinely requires judgment goes to a frontier model, and the output of the cheap tiers is verified there before anything ships.</p>
-      <p>Two guardrails make this safe. The cheap tier never writes anything a customer sees, and it never gets the final word on quality — it gathers evidence; the strong model decides. Routing without those guardrails is how you get confident nonsense at scale.</p>
+      <p>The most expensive AI models are remarkable at judgment: synthesis, ambiguity, client-facing language. They are also routinely wasted on work that does not need judgment at all: checking links, extracting fields from documents, formatting reports, or scanning files for a phrase.</p>
+      <p>We run our own operation on a three-tier rule, and we build the same into client systems. If a task is deterministic, it is a script, at zero AI cost. If it is mechanical but fuzzy, like bulk scanning, extraction, or collation, it goes to a small, cheap model. Only work that genuinely requires judgment goes to a frontier model, and the output of the cheap tiers is verified there before anything ships.</p>
+      <p>Two guardrails make this safe. The cheap tier never writes anything a customer sees, and it never gets the final word on quality. It gathers evidence; the strong model decides. Routing without those guardrails is how you get confident nonsense at scale.</p>
       <p>The payoff isn't only cost. It's capacity: the same budget goes meaningfully further when each task runs at the level it actually requires.</p>
-      <p class="byline">— Jeremy Sheriff, Lawson Group</p>
+      <p class="byline">Jeremy Sheriff, Lawson Group</p>
     </article>
 
     <article class="post" id="company-brain">
       <span class="date">June 2026</span>
       <h2>Your operating model as infrastructure</h2>
-      <p>A company brain is not a chatbot, a wiki, or another app your team has to remember to open. It's the operating model of your business — written down, structured, and connected to AI that can act on it.</p>
-      <p>The build is deliberately boring: plain, structured documents that hold what your business knows — services, pricing rules, processes, decision logic — plus automations wired into the tools you already pay for. Email, calendar, spreadsheets, your existing site. No new platform. No license fees. Nothing your team has to be migrated onto.</p>
-      <p>Boring is the point. Plain text doesn't break when a vendor changes its API. It's readable by any modern AI model — and by whatever replaces them. It's auditable — you can open the file and see exactly what the system believes about your business, and fix it in one edit.</p>
-      <p>The test of a company brain is simple: when someone asks "how do we handle this?", does the answer come from the system in seconds — or from interrupting the one person who knows? Infrastructure is when the answer no longer depends on who's in the room.</p>
-      <p class="byline">— Jeremy Sheriff, Lawson Group</p>
+      <p>A company brain is not a chatbot, a wiki, or another app your team has to remember to open. It is the operating model of your business, written down, structured, and connected to AI that can act on it.</p>
+      <p>The build is deliberately boring: plain, structured documents that hold what your business knows, such as services, pricing rules, processes, and decision logic, plus automations wired into the tools you already pay for. Email, calendar, spreadsheets, your existing site. No new platform. No license fees. Nothing your team has to be migrated onto.</p>
+      <p>Boring is the point. Plain text doesn't break when a vendor changes its API. It is readable by any modern AI model, and by whatever replaces them. It is auditable: you can open the file and see exactly what the system believes about your business, and fix it in one edit.</p>
+      <p>The test of a company brain is simple: when someone asks "how do we handle this?", does the answer come from the system in seconds, or from interrupting the one person who knows? Infrastructure is when the answer no longer depends on who's in the room.</p>
+      <p class="byline">Jeremy Sheriff, Lawson Group</p>
     </article>
 
   </div>
@@ -77,7 +76,7 @@
 <div class="cta-band">
   <div class="container">
     <h2>Reading is free. So is the first call.</h2>
-    <p>30 minutes on your business — you'll leave with a clear answer on what to build first.</p>
+    <p>30 minutes on your business, and you'll leave with a clear answer on what to build first.</p>
     <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
   </div>
 </div>
@@ -94,7 +93,6 @@
     <div class="footer-col">
       <h4>Explore</h4>
       <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
       <a href="services.html">Services</a>
     </div>
     <div class="footer-col">
@@ -109,7 +107,7 @@
       <a href="mailto:lawsongrouptechnologies@gmail.com">Email</a>
     </div>
   </div>
-  <div class="container fine">© 2026 Lawson Group Technologies, LLC. All rights reserved.</div>
+  <div class="container fine">© 2026 Lawson Consulting Group LLC, dba Lawson Group. All rights reserved.</div>
 </footer>
 <script src="app.js" defer></script>
 </body>
