@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Learning-Curve Tax, and How to Stop Paying It | Lawson Group</title>
+<meta name="description" content="Enterprises are adopting AI faster than their people can learn to use it well. The gap is a hidden tax paid in wasted tokens, rewritten output, and ramp time. Here is the tax, the fix, and what it looks like at scale.">
+<link rel="canonical" href="https://lawson-group.pages.dev/ai-learning-curve-tax.html">
+<meta property="og:title" content="The AI Learning-Curve Tax, and How to Stop Paying It">
+<meta property="og:description" content="The bottleneck to enterprise AI is not the model. It is the human learning curve. A Lawson Group perspective.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://lawson-group.pages.dev/ai-learning-curve-tax.html">
+<meta property="og:image" content="https://lawson-group.pages.dev/assets/brand-graph.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.article-body{max-width:760px;margin:0 auto}
+.article-body p{margin:0 0 18px;line-height:1.7}
+.article-body h2{margin:38px 0 14px}
+.article-figure{margin:26px 0}
+.article-figure img{width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 6px 24px rgba(20,40,64,.12)}
+.article-figure figcaption{font-size:.85rem;color:#5b6b7a;margin-top:8px}
+.bynumbers{background:#f3f8fa;border-left:6px solid #2c6d80;border-radius:10px;padding:22px 24px;margin:28px 0}
+.bynumbers h3{margin:0 0 12px;color:#1f3a5f;letter-spacing:.04em;font-size:.95rem}
+.bynumbers p{margin:0 0 10px}
+.bynumbers .lbl{font-weight:700;color:#2c6d80}
+.bynumbers .fine{font-size:.8rem;color:#5b6b7a;font-style:italic}
+.author-box{background:#eaf1f4;border-radius:12px;padding:22px 24px;margin:34px 0 0}
+.author-box strong{color:#1f3a5f}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="progress"></div>
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html">Lawson<span> Group</span></a>
+    <button id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="insights.html" aria-current="page">Insights</a></li>
+      <li class="hide-m"><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="contact.html">Book a Call</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero hero-sub">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>Perspective</span>
+    <h1>The AI learning-curve tax, and how to stop paying it</h1>
+    <p>By Jeremy Sheriff, Lawson Group. July 2026.</p>
+  </div>
+</section>
+
+<section style="padding-top:24px">
+  <div class="container">
+    <div class="article-body">
+
+      <p>Most companies roll out AI the same way. Buy the licenses, open the chat box, and tell people to figure it out. The model works. The rollout stalls. And it stalls on the human interface, not the technology.</p>
+
+      <p>I saw this pattern up close at Capco, where I spent six and a half years on enterprise implementation for Fortune 500 oil, gas, and energy companies, the last three of them focused on GenAI. The projects that failed almost never failed on capability. They failed because the workforce was left to teach itself to prompt by trial and error. That is an expensive, invisible tax. It is paid in wasted tokens, in output that has to be rewritten by hand, and in the diverted attention of your best people.</p>
+
+      <h2>What it is costing you</h2>
+      <p>The learning-curve tax has three line items. Tokens burned on long, zero-shot loops that feed the same context back and forth. Output that has to be rewritten because no one framed the context up front. And skilled employees moonlighting as amateur prompt engineers instead of doing the job you hired them for. None of it is a model problem. All of it is a structure problem, and structure is fixable on day one.</p>
+
+      <h2>What I did about it</h2>
+      <p>I built a structured operating layer, a company brain, that sits between the person and the model, so the first prompt is already framed and pointed at the right output. The person does not learn to prompt. The structure does it for them. Then I ran my entire consulting business on it for a month to see what it would do. I will keep the build to myself. The results, I will show you.</p>
+
+      <figure class="article-figure">
+        <img src="assets/viz-brain-card.png" alt="Value of the Brain dashboard: 7.94M frontier-equivalent tokens avoided, about 52 dollars saved, across 169 routed runs.">
+        <figcaption>Measured on my own operations dashboard. An estimate, with the assumptions shown.</figcaption>
+      </figure>
+
+      <p>For the last month I ran a full consulting operation on this layer as a single operator. Multiple clients, a live lead-generation pipeline, dozens of published websites, daily quality control, and reporting. My own instrumentation shows it avoided roughly 7.94 million frontier-model tokens over the month versus doing the same work unstructured, valued at a conservative blended rate.</p>
+
+      <p>Here is the honest part. The compute behind all of that work cost about twelve dollars for the month. Tokens are cheap. The savings are real, and they are also small in dollar terms, and that is exactly the point. <strong>The constraint on enterprise AI was never compute. It is human ramp time and reclaimed hours.</strong> One operator sustained the output of a small team, because the structure, not the person, carried the learning curve.</p>
+
+      <h2>Now scale it</h2>
+      <figure class="article-figure">
+        <img src="assets/viz-scale.png" alt="Illustrative 250-person model: 11,250 onboarding hours reclaimed, 5,000 hours per month, 3.72 to 4.01 million dollars annualized.">
+        <figcaption>An illustrative labor model. Not a measured or guaranteed result.</figcaption>
+      </figure>
+
+      <p>So what happens when you take that per-operator result and extend it across a real workforce? I built an illustrative model, with assumptions in full below, for a 250-person organization. Bypassing the trial-and-error ramp on day one reclaims on the order of 11,000 working hours in onboarding alone. At steady state, structured AI use gives back roughly 20 hours per employee each month. In fully loaded labor terms, that is a one-time onboarding recovery near 700,000 dollars and an ongoing capacity gain approaching 4 million dollars a year.</p>
+
+      <p>Treat those as a model, not a measurement. The hours-per-employee inputs should be calibrated against your own environment. But the direction is not in question, and the mechanism is the same one I have already run on my own business. Put the structure in first, and the learning curve stops being something you pay for.</p>
+
+      <div class="bynumbers">
+        <h3>BY THE NUMBERS</h3>
+        <p><span class="lbl">Measured (one operator, one month):</span> about 7.94 million frontier-model tokens avoided running a full multi-client consulting business on the brain. Compute cost for the month: about 12 dollars. The point is not the compute. It is the ramp time and the reclaimed hours.</p>
+        <p><span class="lbl">Projected (illustrative, 250-person org):</span> about 11,250 onboarding hours reclaimed on day one (near 700,000 dollars, one time), and about 5,000 hours per month at steady state, approaching 3.72 to 4.01 million dollars in annualized workforce capacity.</p>
+        <p class="fine">Measured figure is an estimate from my own dashboard. Enterprise figures are a labor model with stated assumptions. Not a guaranteed result.</p>
+      </div>
+
+      <h2>Why this is the whole game</h2>
+      <p>Everyone has the same models. The organizations that win with AI will be the ones that stopped making their people absorb the learning curve by hand. The ones that built the operating layer underneath the AI before they scaled it. That is not a technology decision. It is an operating decision, and it is the one most companies are skipping.</p>
+
+      <p>Building that operating layer is the core of what Lawson Group does. If your teams are live on AI but the returns are leaking away in rewrites and ramp time, that is the tax, and removing it is the work. If that resonates, I would welcome the conversation.</p>
+
+      <div class="author-box">
+        <p><strong>About the author.</strong> Jeremy Sheriff is the founder of Lawson Group. He spent six and a half years at Capco on enterprise implementation for Fortune 500 oil, gas, and energy companies, the last three focused on GenAI, and he is a U.S. military veteran. Lawson Group builds AI operating systems, company brains, for growing organizations.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>Is your AI rollout leaking value in ramp time?</h2>
+    <p>One call. You'll leave knowing what to build first and what it would cost.</p>
+    <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <strong>Lawson Group</strong>
+      <p>AI enablement &amp; managed websites<br>Houston, TX</p>
+      <a href="mailto:lawsongrouptechnologies@gmail.com">lawsongrouptechnologies@gmail.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="insights.html">Insights</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <a href="https://www.facebook.com/profile.php?id=61590938600605" target="_blank" rel="noopener">Facebook</a>
+      <a href="mailto:lawsongrouptechnologies@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="container fine">© 2026 Lawson Consulting Group LLC, dba Lawson Group. All rights reserved.</div>
+</footer>
+<script src="app.js" defer></script>
+</body>
+</html>
